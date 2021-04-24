@@ -25,8 +25,12 @@ The user will then follow the prompts in the terminal and answer some questions,
 
 ## Functionality
 
-The app uses the CLI with Inquierer to obtain information from the user and build several types of `Employee` objects.  Once the user is done entering information the application will use a template literal to generate an `index.html` file which is stored in the `dist` folder in the directory. 
+The app uses the CLI with Inquierer to obtain information from the user and build several types of `Employee` objects.  Once the user is done entering information the application will use a template literal to generate an `index.html` file which is stored in the `dist` folder in the directory. The questions have input validation at the front to make sure the information stored is fairly clean.
 
 ## Tests
 
-The application uses the [Jest](https://jestjs.io/) testing framework to validate the objects created are functioning properly.  The validation also checks to see if the inheritance and methods of each object created are functioning properly.
+The application uses the [Jest](https://jestjs.io/) testing framework to validate the objects created are functioning properly.  The validation also checks to see if the inheritance and methods of each object created are functioning properly.  To invoke the test, run:
+
+```bash
+npm test
+```
