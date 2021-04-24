@@ -1,9 +1,11 @@
+// html generating function, is a helper function to index.js, accepts the manager, engineer, and intern list
+// function will call card generators to make cards in the specific locations based on position
 function generateHTML(mL, eL, iL) {
-
+    // reasignment of of the lists
     let managerList = mL;
     let engineerList = eL;
     let internList = iL;
-
+    // returns the html generation string
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -43,11 +45,11 @@ function generateHTML(mL, eL, iL) {
     </body>
     </html>`;
 }
-
+// creates management employee cards
 function createManagementCards(managerList) {
-
+    // initial string
     let returnString = '';
-
+    // loops over every manager object and builds a card per manager
     managerList.forEach((manager) => {
         returnString += `<div class="col s12 m6 l4">
             <div class="card horizontal">
@@ -58,21 +60,21 @@ function createManagementCards(managerList) {
                     </div>
                     <ul class="collection">
                         <li class="collection-item">Employee ID: ${manager.getID()}</li>
-                        <li class="collection-item">Email: ${manager.getEmail()}</li>
+                        <a href="mailto:${manager.getEmail()}" class="collection-item black-text">Email: ${manager.getEmail()}</a>
                         <li class="collection-item">Office: ${manager.getOfficeNumber()}</li>
                     </ul>
                 </div>
             </div>
         </div>`
     });
-
+    // returns string in html syntax to html building function
     return returnString;
 }
-
+// creates engineer employee cards
 function createEngineerCards(engineerList) {
-
+    // initial string
     let returnString = '';
-
+    // loops over every engineer object and builds a card per engineer
     engineerList.forEach((engi) => {
         returnString += `<div class="col s12 m6 l4">
             <div class="card horizontal">
@@ -83,22 +85,22 @@ function createEngineerCards(engineerList) {
                     </div>
                     <ul class="collection">
                         <li class="collection-item">Employee ID: ${engi.getID()}</li>
-                        <li class="collection-item">Email: ${engi.getEmail()}</li>
-                        <a href="#!" class="collection-item black-text">GitHub: ${engi.getGithub()}</a>
+                        <a href="mailto:${engi.getEmail()}" class="collection-item black-text">Email: ${engi.getEmail()}</a>
+                        <a href="https://github.com/${engi.getGithub()}" target="_blank" class="collection-item black-text">GitHub: ${engi.getGithub()}</a>
                     </ul>
                 </div>
             </div>
         </div>`
     });
-
+    // returns string in html syntax to html building function
     return returnString;
 
 }
-
+// creates intern employee cards
 function createInternCards(internList) {
-
+    // initial string
     let returnString = '';
-
+    // loops over every engineer object and builds a card per engineer
     internList.forEach((intern) => {
         returnString += `<div class="col s12 m6 l4">
             <div class="card horizontal">
@@ -109,14 +111,14 @@ function createInternCards(internList) {
                     </div>
                     <ul class="collection">
                         <li class="collection-item">Employee ID: ${intern.getID()}</li>
-                        <li class="collection-item">Email: ${intern.getEmail()}</li>
+                        <a href="mailto:${intern.getEmail()}" class="collection-item black-text">Email: ${intern.getEmail()}</a>
                         <li class="collection-item">School: ${intern.getSchool()}</li>
                     </ul>
                 </div>
             </div>
         </div>`
     });
-
+    // returns string in html syntax to html building function
     return returnString;
 
 }
