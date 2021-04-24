@@ -1,5 +1,6 @@
 Author: Tomasz Siemion
 Project: TeamProfileGen
+DEMO LINK: https://vimeo.com/541098530
 
 # TeamProfileGen
 A simple team visualizer using the CLI and Inquirer to obtain information and making a formatted HTML page for visual representation.
