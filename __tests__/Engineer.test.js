@@ -1,5 +1,7 @@
 const Engineer = require('../lib/engineer')
 
+// test if the Engineer class
+
 describe('Engineer class', () => {
     describe('Instantiate class', () => {
         it('should create a new object of Engineer', () => {

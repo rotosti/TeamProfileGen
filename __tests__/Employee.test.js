@@ -1,5 +1,7 @@
 const Employee = require('../lib/employee');
 
+// test of the Employee class
+
 describe('Employee class', () => {
     describe('Instantiate class', () => {
         it('should create a new object of Employee', () => {

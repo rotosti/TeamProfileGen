@@ -1,5 +1,7 @@
 const Manager = require('../lib/manager')
 
+// test of the Manager class
+
 describe('Manager class', () => {
     describe('Instantiate class', () => {
         it('should create a new object of Manager', () => {

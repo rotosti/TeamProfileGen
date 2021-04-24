@@ -1,5 +1,7 @@
 const Intern = require('../lib/intern')
 
+// test of the Intern class
+
 describe('Intern class', () => {
     describe('Instantiate class', () => {
         it('should create a new object of Intern', () => {
